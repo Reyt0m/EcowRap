@@ -1,2 +1,2 @@
-# EcowRap
-The system make the gift be grateful with AR 
+エコ・ラッピング開発用レポジトリ
+
