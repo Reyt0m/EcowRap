@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <!-- A-Frame ライブラリの読み込み -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <!-- AR.js ライブラリの読み込み -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.0/aframe/build/aframe-ar.js"></script>
+  <body style='margin:0px; overflow:hidden;'>
+  <!-- こっからA-Frame -->
+  <a-scene embedded arjs><!--="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false"--->
+  
+      <!-- こっからARの世界。マーカー上になにを展開するかを書く -->
+      <a-marker preset="hiro">
+          <!--objファイル: 形　mtlファイル: 表面　mtlなしでは透明になってしまう--->
+          <!--scale:サイズ　rotation: 角度 -90??-->
+               <a-text value="Cat AR by J" position="0 0.8 0" align="center"></a-text>
+      </a-marker>
+      <!-- arなのでカメラが必要 -->
+      <a-entity camera></a-entity>
+  </a-scene>
+  <!-- ここまででA-Frameおわり -->
+  
+  </body>
+  <!-- <a-text value="ABCあいうえお日本語" font="custom-msdf.json" font-image="custom-msdf.png" negate="false" scale="2 2 1" position="-2 2 -4"></a-text> -->
+</html>

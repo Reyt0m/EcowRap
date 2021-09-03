@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>EcowRap</title>
+  </head>
+  <link rel="stylesheet" href="../assets/css/index.css">
+
+  <!-- JS読み込み -->
+  <script src="../src/App.js" ></script>
+  <!-- A-Frame ライブラリの読み込み -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <!-- AR.js ライブラリの読み込み -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.0/aframe/build/aframe-ar.js"></script>
+    <!-- Jqueryの読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <!-- qrcode化ライブラリの読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script> 
+
+
+      <p>
+      <label>メッセージ：<input type="text" id="root" value="メッセージを入力"></label>
+      <input type="button" value="Check" id="checkButton">
+      </p>
+    <!-- qrコード化 -->
+    <script type="text/JavaScript"> 
+      $(function(){
+      var qrtext = "ここにQRコード化したいテキストを入力";
+      var utf8qrtext = unescape(encodeURIComponent(qrtext));
+      $("#img-qr").html("");
+      $("#img-qr").qrcode({text:utf8qrtext}); 
+      });
+    </script>
+
+  <!-- <div id="myEmbeddedScene">
+    <a-scene  background="color: #ECECEC"  arjs="debugUIEnabled:false; sourceType: webcam;" embedded　stats>
+      <a-text
+        value= 日本語で遊ぶ
+        font="../src/data/noto-sans-cjk-jp-msdf.json"
+        font-image="../assets/img/noto-sans-cjk-jp-msdf.png"
+        negate="false"
+        scale="1 1 1"
+        position="-1 1.5 -3"
+        color='red'
+        shadow
+        >
+      </a-text>
+        <a-box position="-1 0.5 -3" rotation="0 0 0" color="#4CC3D9" shadow></a-box>
+    </a-scene>
+  </div> -->
+  </body>
+</html>
