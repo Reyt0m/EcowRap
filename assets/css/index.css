@@ -1,4 +1,11 @@
-#myEmbeddedScene {
-    width:100%;
-    height:200px;
-  }
+
+.intrinsic-box {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.aframebox {
+    height: 500px;
+    width: 500px;
+    }
