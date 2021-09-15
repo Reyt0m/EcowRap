@@ -14,7 +14,8 @@ if パソコン画面{
 
 ## web側 website ブランチ 
 ファイル構成
-─assets
+
+`─assets
 │  ├─css
 │  ├─img
 │  └─models <3Dmodel>
@@ -37,4 +38,4 @@ if パソコン画面{
 |    │  jquery.js 
 |    │  nicepage.js <site用>
 |    │  qrcode.js   <メモ用>
-       
+`
