@@ -19,18 +19,18 @@ chromeでデバッグするため、一部VSコード拡張機能が必要
 
 **必須拡張機能**
 
-[Deprecated] Debugger for Chrome
-Live Server
+* [Deprecated] Debugger for Chrome
+* Live Server
 
 
 **利用拡張機能**
 
-HTML CSS Support
-Japanese Language Pack for Visual Studio Code
-JavaScript (ES6) code snippets
-Kite AutoComplete AI Code: Python, Java, Go, PHP, C/C#/C++, Javascript, HTML/CSS, Typescript, React, Ruby, Scala, Kotlin, Bash, Vue, React
-Prettier - Code formatter
-vscode-icons
+* HTML CSS Support
+* Japanese Language Pack for Visual Studio Code
+* JavaScript (ES6) code snippets
+* Kite AutoComplete AI Code: Python, Java, Go, PHP, C/C#/C++, Javascript, HTML/CSS, Typescript, React, Ruby, Scala, Kotlin, Bash, Vue, React
+* Prettier - Code formatter
+* vscode-icons
 
 
 ## スマホ側の開発 
