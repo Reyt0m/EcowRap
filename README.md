@@ -17,12 +17,12 @@ node 12.22.6
 
 chromeでデバッグするため、一部VSコード拡張機能が必要
 
-*必須拡張機能 *
+**必須拡張機能 **
 [Deprecated] Debugger for Chrome
 Live Server
 
 
-*利用拡張機能*
+**利用拡張機能**
 
 HTML CSS Support
 Japanese Language Pack for Visual Studio Code
