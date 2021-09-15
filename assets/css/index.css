@@ -6,6 +6,10 @@
   padding-top: 56.25%;
 } */
 
+body{
+  background-color:#dddddd;
+}
+
 .aframebox {
     height: 500px;
     width: 80%;
