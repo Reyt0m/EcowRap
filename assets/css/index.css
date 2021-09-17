@@ -10,7 +10,7 @@ body{
   background-color:#dddddd;
 }
 
-.aframebox {
-    height: 500px;
+a-scene.aframebox {
+    height: 600px;
     width: 80%;
     }
