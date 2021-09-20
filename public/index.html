@@ -17,11 +17,7 @@
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <!-- AR.js ライブラリの読み込み -->
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.0/aframe/build/aframe-ar.js"></script>
-  <!-- Jqueryの読み込み -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- qrcode化ライブラリの読み込み -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
-  
+
   <meta name="generator" content="Nicepage 3.24.3, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
@@ -30,12 +26,12 @@
 
 
 
-  <script type="application/ld+json">{
+  <!-- <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
 		"logo": "images/default-logo.png"
-}</script>
+}</script> -->
   <meta name="theme-color" content="#478ac9">
   <meta property="og:title" content="Home">
   <meta property="og:type" content="website">
@@ -47,7 +43,7 @@
   <header class="u-clearfix u-header u-header" id="sec-3ac2">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-        <img src="./imag/default-logo.png" class="u-logo-image u-logo-image-1">
+        <img src="./img/default-logo.png" class="u-logo-image u-logo-image-1">
       </a>
       <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
 
@@ -68,7 +64,7 @@
             </li>
           </ul>
         </div>
-        
+
         <div class="u-nav-container-collapse">
           <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
             <div class="u-sidenav-overflow">
@@ -148,29 +144,37 @@
             <input type="button" value="Check" id="checkButton">
           </div>
 
-          
-          <div>
-            <a-scene class="aframebox" antialias="true" embedded>
+
+          <div align="center">
+            <!-- AR -->
+            <a-scene class="aframebox" renderer="antialias: true;
+            colorManagement: true;
+            sortObjects: true;
+            maxCanvasWidth: 1920;
+            maxCanvasHeight: 1920;"
+            embedded
+            align="center">
               <!-- アセット管理 -->
               <a-asset>
                 <a-asset-item id="GiftBox-o" src="./models/GiftBOX_obj/BOX.obj"></a-asset-item>
                 <a-asset-item id="GiftBox-m" src="./models/GiftBOX_obj/BOX.mtl"></a-asset-item>
               </a-asset>
-              <!-- カメラ管理 -->
-              <!-- <a-camera><a-cursor></a-cursor></a-camera> -->
-
-              <a-sky opacity=1 color=grey></a-sky>
-              <!-- <a-plane color=000000 height="100" width="100" rotation="0 0 0"></a-plane> -->
-              <a-entity obj-model="obj: #GiftBox-o; mtl: #GiftBox-m; " rotation="-90 0 0" position="0 1 -3"
-                scale="0.01 0.01 0.01">
+                <!-- 背景 -->
+              <a-sky opacity=1 color=#DDD></a-sky>
+              <!-- カメラ -->
+              <a-entity camera  wasd-controls="acceleration:120" rotation="-80 0 0 " position="0 1 2">
                 <!-- text -->
-              </a-entity>
-              <a-text id="textMessages" value="メッセージを入力" font="./data/noto-sans-cjk-jp-msdf.json"
-                font-image="./img/noto-sans-cjk-jp-msdf.png" negate="false" align="center" position="0 2 -3"
+                <a-text id="textMessages" value="メッセージを入力" font="./data/noto-sans-cjk-jp-msdf.json"
+                font-image="./img/noto-sans-cjk-jp-msdf.png" negate="false" align="center" position="0 0 -3"
                 scale="0.5 0.5 0.5" color="black"></a-text>
+                <!-- モデル -->
+                <a-entity animation="property : rotation; from: -90 0 0; to: -90 360 0; loop:true; dur: 10000 easing:null;" obj-model="obj: #GiftBox-o; mtl: #GiftBox-m; " rotation="0 00 0" position="0 -1 -3"
+                scale="0.01 0.01 0.01" >
+                </a-entity>
+              </a-entity>
             </a-scene>
           </div>
-          
+
           <div class="u-product-control u-product-price u-product-price-1">
             <div class="u-price-wrapper u-spacing-10">
               <!--product_old_price-->
