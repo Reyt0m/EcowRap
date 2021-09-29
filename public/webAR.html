@@ -1,5 +1,16 @@
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>box</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <!-- Ar maker 読み込み -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
 <style>
   .arjs-loader {
     height: 100%;
@@ -34,13 +45,21 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+      <!-- アセット管理 -->
+      <a-asset>
+        <!-- <a-asset-item id="GiftBox-o" src="./models/GiftBOX_obj/BOX.obj"></a-asset-item>
+        <a-asset-item id="GiftBox-m" src="./models/GiftBOX_obj/BOX.mtl"></a-asset-item> -->
+        <a-asset-item id="GiftBox-o" src="./models/BOX1/BOX2.obj"></a-asset-item>
+        <a-asset-item id="GiftBox-m" src="./models/BOX1/BOX1.mtl"></a-asset-item>
+      </a-asset>
     <a-marker type='pattern' url='./pattern/pattern-276237.patt'>
 
-      <a-entity
-        gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        scale="5 5 5"
-        position="50 150 0"
-      >
+      <a-entity obj-model="obj: #GiftBox-o; mtl: #GiftBox-m; "
+      rotation="0 00 0"
+      position="0 -5 0"
+      scale="0.5 0.5 0.5" >
+      </a-entity>
+
       </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
